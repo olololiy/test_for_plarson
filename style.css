@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+    "h h"
+    "n p"
+    "f f ";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 200px calc(100vw - 200px);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header{
+    grid-area: h;
+    background-color: red;
+    min-height: 50px;
+    justify-items: stretch;
+}
+
+.navigation{
+    grid-area: n;
+    background-color: orange;
+    overflow: auto;
+}
+
+.page{
+    grid-area: p;
+    background-color: purple;
+    overflow: auto;
+}
+
+.footer{
+    grid-area: f;
+    background-color: green;
+    min-height: 100px;
+    justify-items: stretch;
+}
+
+.textarea{
+    height: 100%;
+    overflow: visible;
+}
